@@ -20,17 +20,13 @@ inputs:
     description: 'Update the comment on each new commit. If value is set to false, bot will post a new comment on each change'
     required: false
     default: 'true'
-  version:
-    description: 'Target version of Simek/yarn-lock-changes to use.'
-    required: false
-    default: 'main'
 runs:
   using: "composite"
   steps:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Yarn Lock Changes
-      uses: Simek/yarn-lock-changes@${{ inputs.version }}
+      uses: Simek/yarn-lock-changes@v0.8.1
       with:
         token: "${{ inputs.token }}"
         collapsibleThreshold: "${{ inputs.collapsibleThreshold }}"

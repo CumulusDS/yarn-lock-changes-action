@@ -27,9 +27,6 @@ Default: `yarn.lock`
 Update the comment on each new commit. If value is set to false, bot will post a new comment on each change
 Default: `true`
 
-#### `version`
-Target version of Simek/yarn-lock-changes to use
-Default: `main`
 
 ### Example usage
 ```yaml
